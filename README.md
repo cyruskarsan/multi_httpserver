@@ -1,4 +1,4 @@
-Written by Cyrus Karsan, akarsan@ucsc.edu
+Written by Cyrus Karsan
 
 # Mulithreaded HTTP Server
 This program is a multihtreaded HTTP server which is able to parse GET, HEAD, and PUT requests concurrently from multiple clients. Correct responses will return 200 or 201 status codes. If any other request is given, the server will return a 400 or the respective error code. 
