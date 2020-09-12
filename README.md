@@ -1,8 +1,8 @@
 Written by Cyrus Karsan
 
-# Mulithreaded HTTP Server with Logging
-This program is a multihtreaded HTTP server which is able to parse GET, HEAD, and PUT requests concurrently from multiple clients. Correct responses will return 200 or 201 status codes. If any other request is given, the server will return a 400 or the respective error code.\
-Implemented using a dispatch worker model in which one thread is allocated as the client and the others are workers which parse requests simultaneously. Logging is also done in parallel with request parsing. All data hazards (RAW,WAR,WAW) have been accounted for.\ 
+# Multithreaded HTTP Server with Logging
+This program is a multitreaded HTTP server which is able to parse GET, HEAD, and PUT requests from multiple clients in parallel. In addition, the server is able to, concurrently, log all requests and perform a health check of the server\
+Implemented using a dispatch worker model in which one thread is allocated as the client and the others are workers which parse requests simultaneously. All data hazards (RAW,WAR,WAW) have been accounted for.\ 
 When you run httpserver you must specify the port, whether you would like to enable logging, and the number of threads. Logging and number of threads are optional parameters.
 
 ## Usage:
